@@ -56,39 +56,47 @@ export default {
   },
   computed: {
     jsonLd() {
-      return {
-        "@context": "https://schema.org",
-        "@type": "Store",
-        "name": "SmartChoice",
-        "description": "Encuentra lo mejor en un solo lugar. Catálogo de productos de tecnología a los mejores precios.",
-        "url": "https://tusitio.com",
-        "brand": {
-          "@type": "Brand",
-          "name": "SmartChoice"
-        },
-        "mainEntity": {
-          "@type": "ItemList",
-          "name": "Catálogo de productos",
-          "itemListElement": this.catalog.map((product, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "item": {
-              "@type": "Product",
-              "name": product.title,
-              "image": product.thumbnail,
-              "description": product.source,
-              "offers": {
-                "@type": "Offer",
-                "price": product.price.replace(/[^\d.]/g, ""),
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": product.product_link
-              }
-            }
-          }))
+  return {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "SmartChoice",
+    "description": "Encuentra lo mejor en un solo lugar. Catálogo de productos de tecnología a los mejores precios.",
+    "url": "https://ing-web-proyect.vercel.app/catalogo",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Bosa",
+      "addressLocality": "Bogota",
+      "addressRegion": "COL",
+      "postalCode": "110721",
+      "addressCountry": "CO"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "SmartChoice"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Catálogo de productos",
+      "itemListElement": this.catalog.map((product, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": product.title,
+          "image": product.thumbnail,
+          "description": product.source,
+          "offers": {
+            "@type": "Offer",
+            "price": product.price.replace(/[^\d.]/g, ""),
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": product.product_link
+          }
         }
-      };
+      }))
     }
+  };
+}
   },
   methods: {
     renderJsonLd() {

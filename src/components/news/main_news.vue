@@ -66,8 +66,6 @@ const news = ref([]);
 
 onMounted(async () => {
   news.value = await getNews();
-
-  // Cuando ya cargamos las noticias, insertamos el JSON-LD
   insertJsonLd();
 });
 
@@ -77,6 +75,7 @@ const jsonLd = computed(() => {
     "@type": "CollectionPage",
     "name": "TechNews",
     "description": "Noticias sobre tecnología, innovación e inteligencia artificial.",
+    "url": "https://ing-web-proyect.vercel.app/noticias",
     "mainEntity": news.value.map((noticia, index) => ({
       "@type": "NewsArticle",
       "headline": noticia.title,
