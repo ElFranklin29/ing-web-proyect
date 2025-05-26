@@ -29,9 +29,10 @@
     >
       <div class="card h-100 border-0 shadow d-flex flex-column" :style="{ backgroundColor: '#2A2A2A', minHeight: '100%' }">
         <img
+           loading="lazy"
           :src="noticia.multimedia[0].url"
           class="card-img-top noticia-img"
-          :alt="`Imagen ilustrativa de la noticia titulada ${noticia.title}`"
+          :alt="`Imagen ilustrativa de la noticia titulada`"
         />
         <div class="card-body d-flex flex-column">
           <h3 class="card-title text-white h5">{{ noticia.title }}</h3>
@@ -67,6 +68,14 @@ const news = ref([]);
 onMounted(async () => {
   news.value = await getNews();
   insertJsonLd();
+  
+  if (news.value.length > 0 && news.value[0].multimedia?.[0]?.url) {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'image';
+  link.href = news.value[0].multimedia[0].url;
+  document.head.appendChild(link);
+}
 });
 
 const jsonLd = computed(() => {
