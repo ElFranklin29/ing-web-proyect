@@ -1,17 +1,19 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import router from './router'
+import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import router from './router'
+import VueGtmPlugin from 'vue-gtm/dist/plugin'
 
-app.use(VueGtm, {
-  id: 'GTM-59G6W7LB', // tu GTM ID
+const app = createApp(App)
+
+app.use(router)
+app.mount('#app')
+
+app.use(VueGtmPlugin, {
+  id: 'GTM-59G6W7LB', 
   enabled: true,
   debug: true,
-  vueRouter: router, // si usas vue-router
-});
-
-
-createApp(App).use(router).mount('#app')
-
+  vueRouter: router, 
+})
