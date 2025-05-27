@@ -33,7 +33,7 @@
                 <h5 class="card-title">{{ product.title }}</h5>
                 <p class="mb-1">{{ product.source }}</p>
                 <p class="mb-3"><strong> <span class="text-success">{{ product.price }}</span> </strong></p>
-                <a class="btn btn-primary w-100" :href=product.product_link target="_blank">Ver producto</a>
+                <a @click.prevent="trackProductoClick(product)" class="btn btn-primary w-100" :href=product.product_link target="_blank" >Ver producto</a>
               </div>
             </div>
           </div>
@@ -101,7 +101,21 @@ export default {
   methods: {
     renderJsonLd() {
       return JSON.stringify(this.jsonLd, null, 2);
-    }
+    },
+     trackProductoClick(product) {
+    // Enviar evento al dataLayer
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'click_producto_catalogo',
+      nombre_producto: product.nombre,
+      categoria_producto: product.categoria
+    });
+
+    // Redirigir manualmente después de un pequeño retardo
+    setTimeout(() => {
+      window.open(product.product_link, '_blank');
+    }, 300); // le damos 300ms para que el evento se envíe
+  }
   },
   mounted() {
     // Eliminar si ya existe (por si el componente se monta/desmonta)
@@ -118,6 +132,8 @@ export default {
     document.head.appendChild(script);
   }
 }
+
+
 </script>
 
 
