@@ -44,7 +44,8 @@
             :href="noticia.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-sm text-white"
+            class="btn btn-sm text-white btn-leer-mas"
+            :id="`noticia-${noticia.id}`"
             :style="{ backgroundColor: '#2196F3' }"
             :aria-label="`Leer más sobre ${noticia.title}`"
           >
@@ -118,6 +119,11 @@ function insertJsonLd() {
 
   document.head.appendChild(script);
 }
+
+
+
+
+
 </script>
 
 
