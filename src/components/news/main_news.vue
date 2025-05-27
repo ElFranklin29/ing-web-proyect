@@ -30,7 +30,7 @@
       <div class="card h-100 border-0 shadow d-flex flex-column" :style="{ backgroundColor: '#2A2A2A', minHeight: '100%' }">
         <img
            loading="lazy"
-          :src="noticia.multimedia[0].url"
+          :src="noticia.multimedia[1].url"
           class="card-img-top noticia-img"
           :alt="`Imagen ilustrativa de la noticia titulada`"
         />
