@@ -11,9 +11,3 @@ const app = createApp(App)
 app.use(router)
 app.mount('#app')
 
-app.use(VueGtmPlugin, {
-  id: 'GTM-59G6W7LB', 
-  enabled: true,
-  debug: true,
-  vueRouter: router, 
-})
