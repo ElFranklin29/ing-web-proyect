@@ -1,7 +1,53 @@
-# Vue 3 + Vite
+# 🌐 WebSolutions
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**WebSolutions** es una página desarrollada como parte de un taller académico que simula un catálogo de productos y una sección de noticias. Este proyecto se centra en aplicar buenas prácticas de desarrollo web, incluyendo accesibilidad, SEO, microetiquetado y validación de código.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
 
-Documentación proyecto: https://docs.google.com/document/d/1-1Dh7WEJoHePSCqlA527R7l7fagu8ivkBIWsooJw0c8/edit?usp=drivesdk
+## 📦 Secciones del Proyecto
+
+### 🛍️ Catálogo de Productos
+- ✅ Maquetado de forma semántica con HTML5 y CSS3
+- ✅ Microetiquetado con [Schema.org](https://schema.org/)
+- ✅ Enlaces externos hacia tiendas en portales reales
+- ✅ Buenas prácticas de estructura y navegación
+
+### 📰 Sección de Noticias
+- ✅ Diseño limpio y ordenado
+- ✅ Etiquetado semántico y microdatos aplicados
+- ✅ Enlaces a fuentes confiables
+- ✅ Accesibilidad aplicada
+
+---
+
+## 📚 Temas Abordados
+
+- ✅ Validación de HTML y CSS con [W3C Validator](https://validator.w3.org/)
+- ✅ Uso de etiquetas semánticas correctamente aplicadas
+- ✅ Accesibilidad básica evaluada con [WAVE](https://wave.webaim.org/)
+- ✅ Prácticas fundamentales de SEO On-Page
+- ✅ Testing con [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) y HTMLHint
+- ✅ Microetiquetado con `Schema.org` para productos y artículos
+- ✅ Configuración de seguimiento con Google Tag Manager y Google Analytics
+
+---
+
+## 📏 Criterios de Evaluación
+
+- 🧪 **Sin errores críticos** en validadores HTML y CSS del W3C
+- ♿ **Accesibilidad validada** con herramientas automáticas (WAVE, Lighthouse)
+- 💡 **Puntaje de 85% o superior en Lighthouse** en "Accesibilidad" y "Best Practices" (escritorio y móvil)
+- 🧹 Código limpio, estructurado y semántico
+- 📄 Informe final con evidencias y mejoras aplicadas
+
+---
+
+## 🚀 Cómo visualizar el proyecto
+
+Puedes ver el proyecto en línea desde este enlace:  
+🔗  [Link]([https://www.linkedin.com/](https://ing-web-proyect.vercel.app/)) 
+
+---
+
+**Franklin Castañeda**  
+Estudiante de Ingeniería de Software  
