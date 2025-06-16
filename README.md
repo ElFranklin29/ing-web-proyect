@@ -45,7 +45,7 @@
 ## 🚀 Cómo visualizar el proyecto
 
 Puedes ver el proyecto en línea desde este enlace:  
-🔗  [Link]([https://www.linkedin.com/](https://ing-web-proyect.vercel.app/)) 
+🔗  [Link](https://ing-web-proyect.vercel.app/) 
 
 ---
 
