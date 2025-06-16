@@ -15,7 +15,7 @@
 ### 📰 Sección de Noticias
 - ✅ Diseño limpio y ordenado
 - ✅ Etiquetado semántico y microdatos aplicados
-- ✅ Enlaces a fuentes confiables
+- ✅ Uso de API de New York Times para traer las noticias
 - ✅ Accesibilidad aplicada
 
 ---
